@@ -1,0 +1,129 @@
+.sticky-subnav {
+  position: sticky;
+  top: var(--header-height);
+  width: 100%;
+  height: 54px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-light);
+  z-index: 90;
+  transition: box-shadow 0.2s ease;
+}
+
+.sticky-subnav.is-sticky {
+  box-shadow: var(--shadow-sm);
+}
+
+.subnav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.subnav-tabs {
+  display: flex;
+  gap: 28px;
+  height: 100%;
+}
+
+.subnav-tab {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+  cursor: pointer;
+}
+
+.subnav-tab:hover {
+  color: var(--text-primary);
+}
+
+.subnav-tab.active {
+  color: var(--text-primary);
+}
+
+.subnav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--text-primary);
+  border-radius: 2px 2px 0 0;
+}
+
+.subnav-reserve-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.subnav-reserve-bar.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mini-price-info {
+  text-align: right;
+}
+
+.mini-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.mini-price-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.mini-price-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.mini-rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 1px;
+}
+
+.mini-rating-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mini-reserve-btn {
+  background: var(--airbnb-coral-gradient);
+  color: #FFFFFF;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.mini-reserve-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.mini-reserve-btn:active {
+  transform: scale(0.98);
+}

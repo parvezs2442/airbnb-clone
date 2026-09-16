@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="100%" height="100%" style="background-color: #0F172A; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF385C" />
+      <stop offset="100%" stop-color="#E00B41" />
+    </linearGradient>
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <linearGradient id="gwGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="50" y="30" width="1500" height="90" rx="16" fill="#1E293B" filter="url(#cardShadow)" stroke="#334155" stroke-width="1.5" />
+  <circle cx="95" cy="75" r="22" fill="url(#headerGrad)" />
+  <path d="M95 62 C88 71 83 78 86 83 C89 87 95 87 95 87 C95 87 101 87 104 83 C107 78 102 71 95 62 Z" fill="#FFFFFF" />
+  <text x="135" y="70" fill="#F8FAFC" font-size="24" font-weight="800" letter-spacing="-0.5">AIRBNB PRODUCTION-SCALE SYSTEM ARCHITECTURE</text>
+  <text x="135" y="94" fill="#94A3B8" font-size="14" font-weight="500">High-Availability Vacation-Rental Marketplace · Multi-Region Scalability &amp; Low-Latency Blueprint</text>
+  <rect x="1350" y="58" width="170" height="34" rx="8" fill="#FF385C" />
+  <text x="1435" y="80" fill="#FFFFFF" font-size="13" font-weight="700" text-anchor="middle">ACTIVE-ACTIVE MULTI-REGION</text>
+
+  <!-- LAYER 1: CLIENTS & EDGE TIER -->
+  <g id="layer-edge">
+    <rect x="50" y="140" width="1500" height="150" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="70" y="155" width="220" height="26" rx="6" fill="#F59E0B" fill-opacity="0.15" stroke="#F59E0B" stroke-width="1" />
+    <text x="180" y="172" fill="#FBBF24" font-size="12" font-weight="700" text-anchor="middle">LAYER 1 · GLOBAL EDGE &amp; CDN</text>
+
+    <!-- Client Apps -->
+    <rect x="80" y="195" width="240" height="75" rx="12" fill="#0F172A" stroke="#475569" stroke-width="1" />
+    <text x="100" y="225" fill="#F8FAFC" font-size="15" font-weight="700">Client Devices</text>
+    <text x="100" y="248" fill="#94A3B8" font-size="12">Web (Next.js), iOS, Android</text>
+
+    <!-- Cloudflare Anycast CDN & WAF -->
+    <rect x="370" y="195" width="310" height="75" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1" />
+    <text x="390" y="225" fill="#FBBF24" font-size="15" font-weight="700">Cloudflare Anycast CDN &amp; WAF</text>
+    <text x="390" y="248" fill="#94A3B8" font-size="12">DDoS Shield, Bot Management, SSL Termination</text>
+
+    <!-- Edge Workers & SSR Caching -->
+    <rect x="730" y="195" width="320" height="75" rx="12" fill="#0F172A" stroke="#EF4444" stroke-width="1" />
+    <text x="750" y="225" fill="#F87171" font-size="15" font-weight="700">Edge Compute &amp; Caching</text>
+    <text x="750" y="248" fill="#94A3B8" font-size="12">Edge SSR Hydration, Geo-Routing &amp; Stale-While-Revalidate</text>
+
+    <!-- Media CDN & Image Optimizer -->
+    <rect x="1100" y="195" width="420" height="75" rx="12" fill="#0F172A" stroke="#EC4899" stroke-width="1" />
+    <text x="1120" y="225" fill="#F472B6" font-size="15" font-weight="700">Cloudflare Images / Dynamic Media CDN</text>
+    <text x="1120" y="248" fill="#94A3B8" font-size="12">On-the-fly AVIF/WebP Resizing, Responsive Thumbnails</text>
+  </g>
+
+  <!-- LAYER 2: API GATEWAY & MICROSERVICES -->
+  <g id="layer-services">
+    <rect x="50" y="310" width="1500" height="270" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="70" y="325" width="270" height="26" rx="6" fill="#3B82F6" fill-opacity="0.15" stroke="#3B82F6" stroke-width="1" />
+    <text x="205" y="342" fill="#60A5FA" font-size="12" font-weight="700" text-anchor="middle">LAYER 2 · API GATEWAY &amp; MICROSERVICES</text>
+
+    <!-- API Gateway Box -->
+    <rect x="80" y="365" width="280" height="195" rx="12" fill="#0F172A" stroke="#3B82F6" stroke-width="1" />
+    <text x="100" y="395" fill="#60A5FA" font-size="16" font-weight="700">Federated API Gateway</text>
+    <text x="100" y="420" fill="#94A3B8" font-size="12">• Envoy Gateway / Apollo Router</text>
+    <text x="100" y="445" fill="#94A3B8" font-size="12">• Rate Limiting (Token Bucket)</text>
+    <text x="100" y="470" fill="#94A3B8" font-size="12">• OAuth2 / JWT Session Auth</text>
+    <text x="100" y="495" fill="#94A3B8" font-size="12">• OpenTelemetry Tracing</text>
+    <text x="100" y="520" fill="#94A3B8" font-size="12">• Schema Stitching / Subgraphs</text>
+
+    <!-- Microservices Grid -->
+    <g transform="translate(390, 365)">
+      <!-- Listing Service -->
+      <rect x="0" y="0" width="260" height="90" rx="10" fill="#0F172A" stroke="#6366F1" stroke-width="1" />
+      <text x="20" y="30" fill="#818CF8" font-size="15" font-weight="700">Listing &amp; Content Service</text>
+      <text x="20" y="52" fill="#94A3B8" font-size="12">Property details, rooms, photos,</text>
+      <text x="20" y="70" fill="#94A3B8" font-size="12">amenities &amp; host attributes</text>
+
+      <!-- Booking & Reservation Engine -->
+      <rect x="280" y="0" width="260" height="90" rx="10" fill="#0F172A" stroke="#EF4444" stroke-width="1.5" />
+      <text x="300" y="30" fill="#F87171" font-size="15" font-weight="700">Booking Engine (Core)</text>
+      <text x="300" y="52" fill="#94A3B8" font-size="12">ACID transactions, Hold locks,</text>
+      <text x="300" y="70" fill="#94A3B8" font-size="12">Inventory isolation &amp; checkout</text>
+
+      <!-- Dynamic Pricing Service -->
+      <rect x="560" y="0" width="260" height="90" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1" />
+      <text x="580" y="30" fill="#34D399" font-size="15" font-weight="700">Pricing &amp; Promo Service</text>
+      <text x="580" y="52" fill="#94A3B8" font-size="12">Seasonal pricing, coupons (10%),</text>
+      <text x="580" y="70" fill="#94A3B8" font-size="12">cleaning fees, multi-currency</text>
+
+      <!-- Search & Discovery Service -->
+      <rect x="840" y="0" width="280" height="90" rx="10" fill="#0F172A" stroke="#F59E0B" stroke-width="1" />
+      <text x="860" y="30" fill="#FBBF24" font-size="15" font-weight="700">Search &amp; Discovery Service</text>
+      <text x="860" y="52" fill="#94A3B8" font-size="12">Spatial geo-radius, date filters,</text>
+      <text x="860" y="70" fill="#94A3B8" font-size="12">amenity filtering &amp; ranking AI</text>
+
+      <!-- Reviews & Trust Service -->
+      <rect x="0" y="105" width="260" height="90" rx="10" fill="#0F172A" stroke="#8B5CF6" stroke-width="1" />
+      <text x="20" y="135" fill="#A78BFA" font-size="15" font-weight="700">Reviews &amp; Trust Service</text>
+      <text x="20" y="157" fill="#94A3B8" font-size="12">4.95 badge calculation, guest</text>
+      <text x="20" y="175" fill="#94A3B8" font-size="12">reviews, fraud &amp; spam audit</text>
+
+      <!-- Payment & Escrow Service -->
+      <rect x="280" y="105" width="260" height="90" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1" />
+      <text x="300" y="135" fill="#34D399" font-size="15" font-weight="700">Payment &amp; Payout Service</text>
+      <text x="300" y="157" fill="#94A3B8" font-size="12">Stripe / Razorpay integration,</text>
+      <text x="300" y="175" fill="#94A3B8" font-size="12">Escrow hold, host payouts</text>
+
+      <!-- Notification & Messaging -->
+      <rect x="560" y="105" width="260" height="90" rx="10" fill="#0F172A" stroke="#06B6D4" stroke-width="1" />
+      <text x="580" y="135" fill="#22D3EE" font-size="15" font-weight="700">Notification &amp; Chat</text>
+      <text x="580" y="157" fill="#94A3B8" font-size="12">WebSocket real-time chat,</text>
+      <text x="580" y="175" fill="#94A3B8" font-size="12">Email / SMS / Push triggers</text>
+
+      <!-- User & Host Management -->
+      <rect x="840" y="105" width="280" height="90" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1" />
+      <text x="860" y="135" fill="#60A5FA" font-size="15" font-weight="700">Host &amp; User Profile Service</text>
+      <text x="860" y="157" fill="#94A3B8" font-size="12">Mirashya Homes profile, KYC,</text>
+      <text x="860" y="175" fill="#94A3B8" font-size="12">Wishlists, badges &amp; Superhost</text>
+    </g>
+  </g>
+
+  <!-- LAYER 3: STORAGE, SEARCH & DATA TIER -->
+  <g id="layer-data">
+    <rect x="50" y="600" width="1500" height="280" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="70" y="615" width="310" height="26" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1" />
+    <text x="225" y="632" fill="#34D399" font-size="12" font-weight="700" text-anchor="middle">LAYER 3 · STORAGE, CACHING &amp; EVENT STREAMING</text>
+
+    <!-- Distributed Relational Database (CockroachDB / Sharded Aurora) -->
+    <rect x="80" y="655" width="340" height="205" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="1.5" />
+    <circle cx="115" cy="685" r="14" fill="#10B981" fill-opacity="0.2" />
+    <text x="115" y="690" fill="#10B981" font-size="14" font-weight="800" text-anchor="middle">DB</text>
+    <text x="140" y="690" fill="#34D399" font-size="16" font-weight="700">Sharded Aurora PostgreSQL</text>
+    <text x="100" y="720" fill="#94A3B8" font-size="12">• Multi-Region Active-Active Shards</text>
+    <text x="100" y="745" fill="#94A3B8" font-size="12">• CockroachDB for Global ACID Bookings</text>
+    <text x="100" y="770" fill="#94A3B8" font-size="12">• Read Replicas across 3 Continents</text>
+    <text x="100" y="795" fill="#94A3B8" font-size="12">• Connection Pooling via PgBouncer</text>
+    <text x="100" y="820" fill="#94A3B8" font-size="12">• Point-in-Time Recovery &amp; WAL archiving</text>
+
+    <!-- Distributed In-Memory Cache (Redis Cluster) -->
+    <rect x="445" y="655" width="320" height="205" rx="12" fill="#0F172A" stroke="#EF4444" stroke-width="1" />
+    <circle cx="480" cy="685" r="14" fill="#EF4444" fill-opacity="0.2" />
+    <text x="480" y="690" fill="#EF4444" font-size="14" font-weight="800" text-anchor="middle">R</text>
+    <text x="505" y="690" fill="#F87171" font-size="16" font-weight="700">Redis Enterprise Cluster</text>
+    <text x="465" y="720" fill="#94A3B8" font-size="12">• Redlock for Distributed Calendar Holds</text>
+    <text x="465" y="745" fill="#94A3B8" font-size="12">• Sub-millisecond Listing Cache</text>
+    <text x="465" y="770" fill="#94A3B8" font-size="12">• Session &amp; Rate Limit Counters</text>
+    <text x="465" y="795" fill="#94A3B8" font-size="12">• Geospatial Indexes (GEOSEARCH)</text>
+    <text x="465" y="820" fill="#94A3B8" font-size="12">• Eviction Policy: volatile-lru</text>
+
+    <!-- Search & Vector Engine -->
+    <rect x="790" y="655" width="340" height="205" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1" />
+    <circle cx="825" cy="685" r="14" fill="#F59E0B" fill-opacity="0.2" />
+    <text x="825" y="690" fill="#F59E0B" font-size="14" font-weight="800" text-anchor="middle">S</text>
+    <text x="850" y="690" fill="#FBBF24" font-size="16" font-weight="700">Elasticsearch + Vector DB</text>
+    <text x="810" y="720" fill="#94A3B8" font-size="12">• Full-text &amp; Geo-distance Queries</text>
+    <text x="810" y="745" fill="#94A3B8" font-size="12">• Multi-attribute faceted filtering</text>
+    <text x="810" y="770" fill="#94A3B8" font-size="12">• Pinecone/Milvus for AI Similarity</text>
+    <text x="810" y="795" fill="#94A3B8" font-size="12">• Real-time Change Data Capture (CDC)</text>
+    <text x="810" y="820" fill="#94A3B8" font-size="12">• Debezium sync pipeline from Postgres</text>
+
+    <!-- Kafka Event Mesh & Blob Storage -->
+    <rect x="1155" y="655" width="365" height="205" rx="12" fill="#0F172A" stroke="#8B5CF6" stroke-width="1" />
+    <circle cx="1190" cy="685" r="14" fill="#8B5CF6" fill-opacity="0.2" />
+    <text x="1190" y="690" fill="#8B5CF6" font-size="14" font-weight="800" text-anchor="middle">K</text>
+    <text x="1215" y="690" fill="#A78BFA" font-size="16" font-weight="700">Kafka Bus &amp; Object Storage</text>
+    <text x="1175" y="720" fill="#94A3B8" font-size="12">• Apache Kafka Event Streaming</text>
+    <text x="1175" y="745" fill="#94A3B8" font-size="12">• Booking events, price updates, analytics</text>
+    <text x="1175" y="770" fill="#94A3B8" font-size="12">• AWS S3 / Cloudflare R2 Raw Assets</text>
+    <text x="1175" y="795" fill="#94A3B8" font-size="12">• Automated Lambda Transcoding Pipeline</text>
+    <text x="1175" y="820" fill="#94A3B8" font-size="12">• Snowflake Data Lake for BI &amp; ML models</text>
+  </g>
+
+  <!-- LAYER 4: DEPLOYMENT, CI/CD & OBSERVABILITY -->
+  <g id="layer-infra">
+    <rect x="50" y="900" width="1500" height="160" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="70" y="915" width="340" height="26" rx="6" fill="#64748B" fill-opacity="0.2" stroke="#64748B" stroke-width="1" />
+    <text x="240" y="932" fill="#94A3B8" font-size="12" font-weight="700" text-anchor="middle">LAYER 4 · MULTI-REGION INFRASTRUCTURE &amp; DEPLOYMENT</text>
+
+    <!-- Kubernetes Cluster (EKS) -->
+    <rect x="80" y="955" width="450" height="85" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1" />
+    <text x="100" y="985" fill="#38BDF8" font-size="15" font-weight="700">AWS EKS Multi-Region Kubernetes</text>
+    <text x="100" y="1010" fill="#94A3B8" font-size="12">Auto-scaling Node Groups, Karpenter, Istio Service Mesh,</text>
+    <text x="100" y="1028" fill="#94A3B8" font-size="12">mTLS inter-service encryption &amp; zero-downtime rolling deploys</text>
+
+    <!-- CI/CD GitOps -->
+    <rect x="555" y="955" width="450" height="85" rx="10" fill="#0F172A" stroke="#A855F7" stroke-width="1" />
+    <text x="575" y="985" fill="#C084FC" font-size="15" font-weight="700">GitOps &amp; Infrastructure as Code</text>
+    <text x="575" y="1010" fill="#94A3B8" font-size="12">GitHub Actions CI, ArgoCD Continuous Delivery, Terraform</text>
+    <text x="575" y="1028" fill="#94A3B8" font-size="12">modular blueprints, Canary releases &amp; automated rollback</text>
+
+    <!-- Observability & Reliability -->
+    <rect x="1030" y="955" width="490" height="85" rx="10" fill="#0F172A" stroke="#EC4899" stroke-width="1" />
+    <text x="1050" y="985" fill="#F472B6" font-size="15" font-weight="700">Observability &amp; Reliability Engineering</text>
+    <text x="1050" y="1010" fill="#94A3B8" font-size="12">Datadog APM, Prometheus &amp; Grafana, OpenTelemetry distributed</text>
+    <text x="1050" y="1028" fill="#94A3B8" font-size="12">traces, PagerDuty alerting, Chaos engineering (Chaos Mesh)</text>
+  </g>
+</svg>

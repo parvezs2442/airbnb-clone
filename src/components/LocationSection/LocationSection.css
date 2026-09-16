@@ -1,0 +1,186 @@
+.location-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  border-top: 1px solid var(--border-light);
+}
+
+.location-neighborhood-heading {
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-top: -16px;
+  margin-bottom: 24px;
+}
+
+.exact-map-card {
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background-color: #EAF0E8;
+  border: 1px solid var(--border-light);
+}
+
+.exact-map-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.25s ease;
+  transform-origin: center center;
+}
+
+/* Water Zone */
+.exact-water-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 42%;
+  background: #A5CBE8;
+  clip-path: polygon(0 0, 100% 0, 58% 100%, 0 100%);
+  z-index: 2;
+}
+
+.exact-green-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #D2E5D0;
+  opacity: 0.85;
+}
+
+.circle-coast {
+  width: 90px;
+  height: 90px;
+  top: 38%;
+  right: -20px;
+  z-index: 3;
+}
+
+.circle-land {
+  width: 120px;
+  height: 120px;
+  bottom: 15%;
+  right: 22%;
+  z-index: 1;
+}
+
+/* Land Zone & Grid */
+.exact-land-zone {
+  position: absolute;
+  inset: 0;
+  background-color: #EAF0E8;
+}
+
+.grid-line {
+  position: absolute;
+  background-color: #DFE8DD;
+}
+
+.grid-line.vertical {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.grid-line.vertical.line-1 { left: 20%; }
+.grid-line.vertical.line-2 { left: 38%; }
+.grid-line.vertical.line-3 { left: 56%; }
+.grid-line.vertical.line-4 { left: 74%; }
+
+.grid-line.horizontal {
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.grid-line.horizontal.line-a { top: 30%; }
+.grid-line.horizontal.line-b { top: 55%; }
+.grid-line.horizontal.line-c { top: 80%; }
+
+/* Exact Center Marker Badge */
+.exact-home-marker-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #222222;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.exact-home-marker-badge:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Map Controls */
+.map-search-circle-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  z-index: 20;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.map-search-circle-btn:hover {
+  transform: scale(1.05);
+}
+
+.map-zoom-pill {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 38px;
+  height: 76px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.zoom-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.zoom-btn:hover {
+  background-color: var(--bg-secondary);
+}
+
+.zoom-divider {
+  height: 1px;
+  background-color: var(--border-light);
+}
+
+.exact-location-subtext {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-top: 16px;
+}

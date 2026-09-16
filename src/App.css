@@ -1,0 +1,41 @@
+.airbnb-app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.main-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.main-left-column {
+  flex: 1;
+  min-width: 0;
+  max-width: 650px;
+}
+
+.main-right-column {
+  width: 370px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.lower-sections-container {
+  width: 100%;
+}
+
+@media (max-width: 1120px) {
+  .main-content-wrapper {
+    gap: 40px;
+  }
+
+  .main-right-column {
+    width: 340px;
+  }
+}

@@ -1,0 +1,401 @@
+.booking-widget-wrapper {
+  position: sticky;
+  top: 130px;
+  width: 100%;
+}
+
+/* 10% Discount Promotion Card */
+.discount-promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  background: #FFFFFF;
+}
+
+.discount-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.discount-tag-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--tag-green-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.discount-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.terms-link {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.claim-discount-btn {
+  padding: 7px 16px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: #FFFFFF;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.claim-discount-btn:hover {
+  background-color: var(--bg-secondary);
+}
+
+.claim-discount-btn.claimed {
+  background-color: var(--tag-green);
+  color: #FFFFFF;
+  border-color: var(--tag-green);
+}
+
+/* Main Booking Card */
+.booking-card {
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  background: #FFFFFF;
+  box-shadow: var(--shadow-card);
+}
+
+.booking-price-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.price-tag-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.price-nights-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.applied-discount-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tag-green);
+  background-color: var(--tag-green-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Selector Box */
+.selector-box {
+  border: 1px solid #B0B0B0;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.selector-dates-row {
+  display: flex;
+  border-bottom: 1px solid #B0B0B0;
+}
+
+.selector-date-col {
+  flex: 1;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.selector-date-divider {
+  width: 1px;
+  background-color: #B0B0B0;
+}
+
+.selector-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+.selector-val {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selector-guests-row {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.guests-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.guests-chevron {
+  color: var(--text-primary);
+}
+
+/* Guests Popover */
+.guests-dropdown-popover {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  z-index: 50;
+}
+
+.guest-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.guest-counter-row:last-of-type {
+  border-bottom: none;
+}
+
+.guest-type-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.guest-type-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.counter-btn:not(:disabled):hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.counter-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.counter-val {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 14px;
+  text-align: center;
+}
+
+.popover-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+.popover-close-btn {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Cancellation Pill */
+.cancellation-pill {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* Primary Reserve Button */
+.primary-reserve-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--airbnb-coral-gradient);
+  color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.15s ease, box-shadow 0.2s ease;
+}
+
+.primary-reserve-btn:hover {
+  opacity: 0.96;
+  box-shadow: 0 4px 12px rgba(224, 11, 65, 0.25);
+}
+
+.primary-reserve-btn:active {
+  transform: scale(0.98);
+}
+
+.no-charge-text {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+/* Price Breakdown Details */
+.price-breakdown-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.breakdown-row.discount {
+  color: var(--tag-green);
+  font-weight: 600;
+}
+
+.breakdown-label {
+  text-decoration: underline;
+}
+
+.breakdown-divider {
+  height: 1px;
+  background-color: var(--border-light);
+  margin: 6px 0;
+}
+
+.breakdown-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Report Listing */
+.report-listing-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.report-listing-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.report-listing-btn:hover {
+  color: var(--text-primary);
+}
+
+/* Reservation Modal */
+.modal-box.reservation-modal {
+  width: 480px;
+  text-align: center;
+}
+
+.booking-modal-success-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--tag-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.booking-confirmed-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.booking-confirmed-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.booking-summary-box {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
